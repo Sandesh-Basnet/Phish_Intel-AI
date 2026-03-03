@@ -4,28 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phish-Intel AI - Scan</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Phish-Intel AI</h1>
-        <p>Check if a URL is phishing in seconds</p>
-    </header>
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="topbar-brand">PHISH-INTEL AI</div>
+        <div class="topbar-right">
+            <span><span class="status-dot"></span>System Online</span>
+        </div>
+    </div>
 
-    <main>
-        <section>
-            <div>
-                <form action="dashboard.html" method="GET">
-                    <label for="urlInput">Enter URL to scan:</label>
-                    <input type="url" id="urlInput" name="url" placeholder="https://example.com" required>
-                    <button type="submit">Scan</button>
-                </form>
-            </div>
-        </section>
-    </main>
+    <div class="page-wrap">
 
-    <footer>
-        <p>&copy; 2026 Phish-Intel AI</p>
+        <main>
+            <section class="panel" style="max-width:600px; margin: 4rem auto;">
+                <div class="panel-header">
+                    <div class="wm-dot red"></div>
+                    <div class="wm-dot yellow"></div>
+                    <div class="wm-dot green"></div>
+                    <div class="panel-title">URL SCANNER</div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="section-label">Scan Target</div>
+
+                    <form action="dashboard.html" method="GET">
+                        <input type="url" id="urlInput" name="url"
+                               placeholder="https://example.com"
+                               required
+                               style="width:100%; padding:0.6rem; margin-bottom:1rem; background:#000; border:1px solid #1c3322; color:#00ff41;">
+                        
+                        <button type="submit" class="btn btn-primary">
+                            Scan
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <footer class="site-footer">
+        <span>© 2026 PHISH-INTEL AI</span>
+        <span>Cyber Threat Detection System</span>
     </footer>
 
 </body>

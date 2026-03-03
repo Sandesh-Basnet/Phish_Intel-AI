@@ -4,77 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phish-Intel AI - Dashboard</title>
+
+    <!-- IMPORTANT: base first -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
 
-    <header>
-        <h1>Phish-Intel AI Dashboard</h1>
-        <p>Scan results for your URL will appear below</p>
-    </header>
+    <div class="topbar">
+        <div class="topbar-brand">PHISH-INTEL AI</div>
+        <div class="topbar-right">
+            <span><span class="status-dot"></span>Analysis Complete</span>
+        </div>
+    </div>
 
-    <main>
-        <!-- Risk Summary -->
-        <section>
-            <div>
-                <h2>Risk Summary</h2>
-                <p>Risk Score: <span>0%</span></p>
-                <p>Classification: <span>Safe</span></p>
-                <div><!-- Risk gauge placeholder --></div>
-            </div>
-        </section>
+    <div class="page-wrap">
 
-        <!-- Detailed Explanation -->
-        <section>
-            <div>
-                <h2>Detailed Explanation</h2>
-                <ul>
-                    <!-- ML and rule-based flags inserted here -->
-                </ul>
-            </div>
-        </section>
+        <div class="dashboard-grid">
 
-        <!-- URL Metadata -->
-        <section>
-            <div>
-                <h2>URL Metadata</h2>
-                <p>Domain: <span></span></p>
-                <p>Timestamp: <span></span></p>
-                <p>Model Version: <span></span></p>
-            </div>
-        </section>
+            <!-- Risk Summary -->
+            <section class="panel col-1">
+                <div class="panel-header">
+                    <div class="panel-title">RISK SUMMARY</div>
+                </div>
+                <div class="panel-body risk-gauge-wrap">
+                    <div class="risk-score-number safe">0%</div>
+                    <div class="risk-score-label">RISK SCORE</div>
 
-        <!-- Actions -->
-        <nav>
-            <a href="index.html"><button>Scan Another URL</button></a>
-            <button>View History</button>
-        </nav>
+                    <div class="gauge-bar-wrap">
+                        <div class="gauge-bar-fill safe" style="width:0%"></div>
+                    </div>
 
-        <!-- History / Analytics -->
-        <section>
-            <div>
-                <h2>Scan History</h2>
-                <table>
-                    <thead>
+                    <div class="gauge-ticks">
+                        <span>0</span><span>50</span><span>100</span>
+                    </div>
+
+                    <div class="classification-row">
+                        <span class="badge badge-safe">SAFE</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Explanation -->
+            <section class="panel col-2">
+                <div class="panel-header">
+                    <div class="panel-title">DETAILED EXPLANATION</div>
+                </div>
+                <div class="panel-body">
+                    <ul class="flag-list">
+                        <!-- Flags inserted dynamically -->
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Metadata -->
+            <section class="panel col-3">
+                <div class="panel-header">
+                    <div class="panel-title">URL METADATA</div>
+                </div>
+                <div class="panel-body">
+                    <table class="meta-table">
                         <tr>
-                            <th>Timestamp</th>
-                            <th>Risk Score</th>
-                            <th>Classification</th>
-                            <th>Details</th>
+                            <td>Domain</td>
+                            <td>example.com</td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Previous scan rows inserted here -->
-                    </tbody>
-                </table>
-                <div><!-- Pie chart placeholder --></div>
-                <div><!-- Bar chart placeholder --></div>
-            </div>
-        </section>
+                        <tr>
+                            <td>Timestamp</td>
+                            <td>2026-03-03 10:42</td>
+                        </tr>
+                        <tr>
+                            <td>Model Version</td>
+                            <td>v1.0.0</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
 
-    </main>
+            <!-- Actions -->
+            <section class="panel col-3">
+                <div class="panel-body action-row">
+                    <a href="index.html" class="btn btn-secondary">Scan Another</a>
+                    <button class="btn btn-primary">View History</button>
+                </div>
+            </section>
 
-    <footer>
-        <p>&copy; 2026 Phish-Intel AI</p>
+            <!-- History -->
+            <section class="panel col-3">
+                <div class="panel-header">
+                    <div class="panel-title">SCAN HISTORY</div>
+                </div>
+                <div class="panel-body">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Risk</th>
+                                <th>Classification</th>
+                                <th>URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <span>© 2026 PHISH-INTEL AI</span>
+        <span>Cyber Threat Intelligence Dashboard</span>
     </footer>
 
 </body>
