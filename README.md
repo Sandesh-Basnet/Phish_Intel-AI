@@ -1,6 +1,6 @@
 # Phish-Intel AI
 
-**Phish-Intel AI** is a hybrid AI & cybersecurity platform designed to detect phishing emails and malicious URLs in real time.  
+**Phish-Intel AI** is a hybrid AI & cybersecurity platform designed to detect phishing and malicious URLs in real time.  
 It combines:
 
 - **Machine Learning:** Classifies emails and messages using NLP and feature-based models.  
